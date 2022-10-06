@@ -1,41 +1,49 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import SearchResults from './SearchResults';
 
-function SavedSearches(props) {
-  function fetchSaved() {
-    fetch('http://localhost:3000/saved')
-      .then((res) => res.json())
-      .then((savedData) => {
-        console.log(savedData);
-        const html = savedData
-          .slice(1, 51)
-          .map((data) => {
-            return `
-          
-          <p id=pTag${data.id}> <a target="_blank" href="${data.url}"><img src="${data.picture}" alt="${data.id}" width="100" height="100"/></a><button class="btn btn-link" id="removeButton${data.id}">Remove</button></p>`;
-          })
-          .join('');
-        savedData.innerHTML = html;
-        savedData.slice(1, 51).map((data) => {
-          document
-            .getElementById(`removeButton${data.id}`)
-            .addEventListener('click', (e) => {
-              fetch(`http://localhost:3000/saved/${data.id}`, {
-                method: 'DELETE',
-                headers: {
-                  'Content-Type': 'application/json',
-                },
-              });
-            });
-        });
-      })
-      .catch((error) => {
-        console.log(error);
+function SearchBar(props) {
+  const [searchUser, setSearchUser] = useState('');
+  const [gitObject, setGitObject] = useState('');
+
+  const handleChange = (e) => {
+    setSearchUser(e.target.value);
+  };
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    //find name
+    const search = document.getElementById('search').value;
+    //remove spaces in search query
+    const originalName = search.split(' ').join('');
+
+    fetch('https://api.github.com/users/' + originalName)
+      .then((result) => result.json())
+      .then((data) => {
+        props.setData(data);
       });
   }
 
-  fetchSaved();
-
-  return <div></div>;
+  return (
+    <>
+      <form id='searchForm' autocomplete='off' onSubmit={handleSubmit}>
+        <div className='form-group'>
+          <input
+            type='text'
+            className='form-control'
+            id='search'
+            placeholder='Search Username'
+            required
+            onChange={handleChange}
+          />
+        </div>
+        <div className='form-group'>
+          <button id='searchButton' className='btn btn-danger btn-block'>
+            Search User
+          </button>
+        </div>
+      </form>
+    </>
+  );
 }
 
-export default SavedSearches;
+export default SearchBar;
