@@ -8,8 +8,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background: url(./resources/backgrounds/BlackwWood.jpeg) center no-repeat;
+  background: url(./resources/backgrounds/backgrounds/BlackwWood.jpeg) center no-repeat;
   background-size: cover;
   background-attachment: fixed;
   font-family: gitHubFont;
+}
+.contact {
+  margin-left: 20px;
 }
