@@ -3,7 +3,7 @@ import React from 'react';
 function Title() {
   return (
     <>
-      <h1 className='title'>GitRecruited</h1>
+      <h1 className='title' >Get Recruited</h1>
     </>
   );
 }
