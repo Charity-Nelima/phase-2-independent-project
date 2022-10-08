@@ -6,17 +6,17 @@ import React from 'react';
 function Contact() {
   const linkedin = (
     <a
-      href='https://linkedin.com/in/david-zombar-864794102'
+      href='www.linkedin.com/in/charity-nelima'
       target='_blank'
       rel='noopener noreferrer'
     >
       LinkedIn
     </a>
   );
-  const email = <a href='mailto: CodingWithDavidZ@gmail.com'>Email Me</a>;
+  const email = <a href='mailto: charity.nelima@student.moringaschool.com'>Email Me</a>;
   const blog = (
     <a
-      href='https://medium.com/@CodingWithDavidZ'
+      href=''
       target='_blank'
       rel='noopener noreferrer'
     >
