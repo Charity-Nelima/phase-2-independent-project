@@ -1,9 +1,12 @@
 {
-    "saved": [
-      {
-        "id": 1
-        
-      }
-    ]
-  }
-  
+  "saved": [
+    {
+      "id": 1
+    },
+    {
+      "url": "https://github.com/Charity-Nelima",
+      "picture": "https://avatars.githubusercontent.com/u/82234401?v=4",
+      "id": 2
+    }
+  ]
+}

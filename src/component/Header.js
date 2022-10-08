@@ -15,7 +15,7 @@ function Header() {
         Contact
       </Link>
 
-      <h1 id='gitHired'>GitRecruited</h1>
+      <h1 id='gitHired'>Get Recruited</h1>
     </div>
   );
 }

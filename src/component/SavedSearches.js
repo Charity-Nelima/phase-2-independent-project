@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 function SavedSearches({ saved, setSaved }) {
   useEffect(() => {
     fetch('http://localhost:3000/saved')
       .then((response) => response.json())
       .then((data) => setSaved(data));
-  }, []);
+  }, );
 
   const existingSaved = saved.slice(1, 51).map((data) => {
     return (
@@ -35,7 +35,7 @@ function SavedSearches({ saved, setSaved }) {
 
   function handleClick(id) {
     const filterChange = saved.filter((element) => {
-      return element.id != id;
+      return element.id !== id;
     });
     fetch(`http://localhost:3000/saved/${id}`, {
       method: 'DELETE',
