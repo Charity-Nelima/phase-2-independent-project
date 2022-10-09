@@ -34,36 +34,45 @@
 }
 
 #search {
-  width: 500px;
-  height: 25px;
+  width: 300px;
+  height: 30px;
+  border-radius: 10px;
+  padding-top: 5px;
+  margin-bottom: 10px;
+  
 }
 #searchForm {
   text-align: center;
 }
 
 #searchButton {
-  width: 250px;
+  width: 200px;
   color: black;
   font-weight: bold;
-  background-color: hsl(350, 71%, 51%);
+  background-color: hsl(133, 41%, 22%);
   border: 1px black;
+  border-radius: 10px;
+  height: 30px;
 }
 
 #searchButton:hover {
-  background-color: green;
+  background-color: rgb(29, 46, 46);
   color: white;
+ 
 }
 
 #displaySaved {
-  width: 250px;
+  width: 200px;
   color: black;
   font-weight: bold;
-  background-color: hsl(350, 71%, 51%);
+  background-color: hsl(132, 38%, 21%);
   border: 1px black;
+  height: 30px;
+  border-radius: 10px;
 }
 
 #displaySaved:hover {
-  background-color: green;
+  background-color: rgb(29, 46, 46);
   color: white;
 }
 

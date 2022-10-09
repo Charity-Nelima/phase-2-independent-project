@@ -11,6 +11,7 @@ function About() {
         provide a product that a recruiter or HR team might find useful. I then
         refactored this app using React and added a few additional features.
       </p>
+    
     </div>
   );
 }
