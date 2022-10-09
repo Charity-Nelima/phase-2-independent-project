@@ -21,6 +21,7 @@
   padding: 40px;
   padding-left: 0px;
   color: rgb(232, 243, 235);
+  font-size: x-large;
 }
 
 #homeLink {
@@ -126,7 +127,9 @@
   text-align: center;
   font-size: 3em;
   font-weight: bolder;
-  text-shadow: 0 0 3px hsl(240, 100%, 80%), 0 0 5px white;
+  color: white;
+  /* text-shadow: 0 0 3px hsl(240, 6%, 17%), 0 0 5px rgb(228, 14, 14); */
+  /* padding-bottom: 60px; */
 }
 
 .saved-user:hover {
